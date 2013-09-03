@@ -1,0 +1,38 @@
+
+  <div id="page">
+	  <div id="header">
+	  	<h1>StickMe</h1>
+	  	<input type="text" id="textField" size="100" maxlenght="10"/> 
+	  	<input type="button" id="sendButton" value="Send"/>
+	  </div>
+	 
+	  <div id="container"></div>
+	  
+	  <div id="footer">
+	    StickMe
+	  </div>  
+  </div>
+
+
+<%= javascript_include_tag '/javascripts/initialization.js' %>
+<script>
+	$(function() {
+		$('#textField').focus();
+	});
+
+	newBox("1","Comprar cabo USB", "${serverTime}", "@Gibbs");
+	newBox("1", "Lembrar de ligar na Epura", "${serverTime}", "@naomi");
+	newBox("1", "Fazer cadastramento optico!!!", "${serverTime}");
+	newBox("1","@naomi almoço #sexta hein!", "${serverTime}");
+	newBox("2","@naomi não esqueça de ir no dentista #10/02 #14:30", "${serverTime}");
+	newBox("3","@naomi não esqueça de ir no médico #terça #14:30", "${serverTime}");
+	newBox("4","@dude dont forget to meet #me at Bar", "${serverTime}");
+	newBox("5","@shiga oo da uma olhada nesse site #link", "${serverTime}");
+	newBox("6","@shiga Marquei #Entrevista pra vc ", "${serverTime}");
+	newBox("7","@Gibbs Meet #me at the bar, and #SuitUp", "${serverTime}");
+	newBox("8","@Gibbs You have appointment #10/02 at #12:30pm", "${serverTime}");
+	newBox("9","@naomi olha vc comendo #link =D", "${serverTime}");
+	newBox("10","Comprar presente de casamento #link", "${serverTime}");
+	newBox("11","@gui opa, tudo certo pro casamento? já mandei o presente ;)", "${serverTime}");
+	newBox("12","Lembrar de fazer as paradas dia #07/08 #08/08 #09/08", "${serverTime}", "@lgsanjos");
+</script>

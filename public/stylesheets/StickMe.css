@@ -1,0 +1,165 @@
+#page{
+	
+}
+
+#footer {
+	border-top: 2px solid #fff;
+	background-color: #dedede;
+	
+	height: 22px;
+	width: 100%;
+	display:block;
+	
+	position: fixed;
+	bottom:0px;
+	z-index:9999;
+	
+	text-align: center;
+	
+}
+
+#header {
+	background: url('/images/header.png') no-repeat;
+	height: 120px;
+	width: 700px;
+	
+	position: fixed;
+	top:0px;
+	z-index:9999;
+	
+	margin: 20px;
+	padding: 10px;
+}
+
+#container {
+  padding: 5px;
+  margin-top:180px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  clear: both;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.centered { margin: 0 auto; }
+
+#container .box {
+  margin: 5px;
+  padding: 0px;
+  background: #EDED00;
+  float: left;
+  
+  overflow:hidden; 
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.box .content {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 12px;
+  	color: #333;
+  			
+	text-shadow: 2px 2px 3px #aaa;
+	
+	clear:both;
+}
+
+.box .content .date {
+	text-align: center;
+	line-height: 8px;
+	
+	font-weight: bold;	
+}
+
+.box .content .time {
+	text-align: center;
+	line-height: 8px;
+	font-style: oblique;
+}
+
+.box .content b {
+	font-weight: bold;
+}
+
+.box .content a:visited, 
+.box .content a:link,
+.box .content a {
+	color: black;
+	cursor: pointer;
+	font-style: oblique;
+	font-size: 13px;
+	text-decoration: underline;
+}
+
+.box .header {
+	height: 22px;
+	top: 0px;
+}
+
+.box .header .sender {
+	line-height: 18px;
+
+	font-size: 10px;
+	font-weight: bold;
+	
+	margin-top: 2px;
+	margin-left: 10px;
+	
+	cursor: pointer;
+	float: left;
+	
+}
+
+.box .header .button {
+	width: 23px;
+	height: 22px;
+	margin-left: 3px;
+	margin-right: 3px;
+	float: right;
+	
+	outline: none;
+	cursor: pointer;
+}
+
+.box .header #delete {
+	background: url('/images/delete.png') no-repeat center;
+}
+
+.box .header #delete:hover {
+	background: url('/images/delete_hover.png') no-repeat center;
+}
+
+.box .header #edit {
+	background: url('/images/edit.png') no-repeat center;
+}
+
+.box .header #edit:hover {
+	background: url('/images/edit_hover.png') no-repeat center;
+}
+
+.box .footer {
+	height: 20px;
+	
+	margin-right: 5px;
+	
+	font-size: 10px;
+	text-align: right;
+	font-style: oblique !important;
+	
+}
+
+.shadow {
+	-moz-box-shadow: 2px 2px 3px #444;
+	-webkit-box-shadow: 2px 2px 3px #444;
+	box-shadow: 2px 2px 3px #444;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#000000');
+}
+
+
