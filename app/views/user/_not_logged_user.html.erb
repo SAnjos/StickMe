@@ -1,0 +1,41 @@
+<div id="welcome_page">
+	<h1>StickMe</h1>
+	<p>Be welcome on these first two lines of text, I will make a short presentation of what are you about to. Also I will present to you the three options below, with a couple of smiles =D right ;) the end.</p>
+	<br />
+	<div id="columns">
+		
+		<div class="column" id="login_column">
+			<h2>Sign in</h2>
+			<%= form_tag :controller => 'user', :action => 'login' do %>
+			<div class="mid">
+			    <p>Login or e-mail:<br />
+			    <%= text_field(:login, :login, :class => "input login", :size => 8, :maxlength => 30, :style => "width: 200px;") %></p>
+			    <p>Password: <br />
+			    <%= password_field(:login, :password, :class => "input senha", :size => 9, :maxlength => 15, :style => "width: 100px;") %></p>
+			    <p><%= check_box_tag :remember_me %> Keep connected?</p>	
+			</div>
+		    	<%= submit_tag "Login", :class => 'button' %>
+			<% end %>
+		</div>
+		
+		<div class="column" id="signup_column">		
+			<h2>Sign Up</h2>
+			<div class="mid">
+				<p>Did you try it? Enjoyed? <strong>Want your account?</strong> I really hope so! Click here to create it.</p>
+			</div>			
+			<%= button_to 'Create account', :class => 'create_account button' %>
+		</div>
+		
+		<div class="column" id="test_column">
+			<h2>Wanna test it First?</h2>
+			<%= form_tag :controller => 'user', :action => 'login' do %>
+			<div class="mid">
+				<p>You should give it a Try, no need to <strong>create account</strong> just click right here ;)</p>
+			    <%= hidden_field(:login, :login, :value => 'SharedAccount' ) %></p>
+			    <%= hidden_field(:login, :password, :value => '1234' ) %></p>
+			</div>    
+		    	<%= submit_tag "Let´s do it", :class => 'button' %>
+			<% end %>			
+		</div>
+	</div>	
+</div>
