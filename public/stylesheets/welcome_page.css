@@ -1,0 +1,82 @@
+div#welcome_page {
+	margin: 0px;
+	padding:0px;
+	
+	height: 350px;
+	overflow: hidden;
+}
+
+div#welcome_page h1 {
+	margin: 0px;
+	line-height: 70px;
+	color: #3781a4;
+}
+
+div#welcome_page p {
+	margin: 0px;
+	
+	font-size: 14px;
+	line-height: 18px;
+	word-spacing: 1px;
+	letter-spacing: 1px;
+}
+
+div#welcome_page div#columns {
+	width: 100%;
+	height: 100%;
+}
+
+div#welcome_page div#columns h2 {
+	margin: 10px 0px;
+	
+
+	height: 20px;	
+	font-size: 18px;
+	font-weight: bold;
+	
+	color: #3781a4;
+}
+
+div#welcome_page div.column {
+	float: left;
+
+	width: 235px;
+	height: 220px;
+	overflow: hidden;
+	
+	padding: 0px 0px;
+	margin-left: 15px;
+	
+}  
+
+/* The three columns */
+
+div#welcome_page div#login_column h2{
+}
+
+div#welcome_page div#login_column {
+}
+
+div#welcome_page div#signup_column {
+	      
+		
+}
+
+div#welcome_page div#test_column {
+	
+}
+
+/* form */
+
+div#welcome_page input {
+	margin: 5px 0px;
+}
+
+div#welcome_page .column .mid {
+	
+	width: 220px;
+    height: 120px;
+    word-wrap: break-word;   
+  
+}
+
