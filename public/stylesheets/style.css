@@ -247,6 +247,11 @@ button {
   font-style: italic;
 }
 
+#site-footer a, #site-footer a:hover{
+	text-decoration: none;
+	cursor:default;	
+}
+
 .license-copy {
   font-size: 85%;
 }

@@ -2,6 +2,14 @@
 	
 }
 
+#page a {
+  color: #000000;	
+}
+
+#page a:hover {
+	text-decoration: none;
+}
+
 #footer {
 	border-top: 2px solid #fff;
 	background-color: #dedede;
@@ -30,6 +38,39 @@
 	margin: 20px;
 	padding: 10px;
 }
+
+div#header h1 {
+}
+
+div#header a {
+  color: #333333;	
+}
+
+div#header a:hover {
+	text-decoration: underline;
+}
+
+div#header ul#menu_header {
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+div#header ul#menu_header li{
+	display: inline;
+	margin: 0px 5px;
+	padding: 0px;
+	
+	list-style: none;
+}
+
+
+div#header ul#menu_header li.name{
+	font-weight: bolder;
+	font-size: 14px;
+}
+
 
 #container {
   padding: 5px;

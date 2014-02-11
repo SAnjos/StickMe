@@ -30,7 +30,7 @@ function createPostage(content) {
     $.ajax({
       type: "POST",
       dataType: "json",
-      url: "stick/sequence",
+      url: "stick/new",
       data: { sentence: content },
       success: function(data) {
   			newBox(data.id, data.content, data.creationDate);
