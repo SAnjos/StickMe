@@ -4,14 +4,17 @@
   <title>StickMe</title>
   <%= stylesheet_link_tag :all %>
   <%= stylesheet_link_tag '/stylesheets/pirobox/pirobox.css', :media => 'screen', :title => 'black' %>
+  <%= stylesheet_link_tag '/stylesheets/notify/jquery.pnotify.default.css' %>
+  <%= stylesheet_link_tag '/stylesheets/notify/jquery.pnotify.default.icons.css' %>
   
   <%= javascript_include_tag '/javascripts/3r party/jquery-1.7.1.min.js' %>
   <%= javascript_include_tag '/javascripts/3r party/jquery.masonry.js' %>
   <%= javascript_include_tag '/javascripts/3r party/modernizr-transitions.js' %>
   <%= javascript_include_tag '/javascripts/box-maker.js' %>
   <%= javascript_include_tag '/javascripts/content-processor.js' %>
+  <%= javascript_include_tag '/javascripts/3r party/notify/jquery.pnotify.js'%>
   
-  <%= javascript_include_tag '/javascripts/3r party/pirobox.js'%>  
+  <%= javascript_include_tag '/javascripts/3r party/pirobox.js'%>
   <%= csrf_meta_tag %>
 </head>
 <body>

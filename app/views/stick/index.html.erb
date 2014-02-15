@@ -1,27 +1,25 @@
-  <div id="page">
-	  <div id="header">
-	  	<h1>StickMe</h1>
-	  	<% unless @logged_user.nil? %>
-		  	<ul id="menu_header">
-		  		<li class="name"><%= @logged_user.name %></li>
-		  		<li><%= link_to "Logout", "user/logout_forever" %></li>
-		  	</ul>
-	  	<% end %>
-	  	<input type="text" id="textField" size="100" maxlenght="10"/> 
-	  	<input type="button" id="sendButton" value="Send"/>
-	  </div>
-
-	  <div id="container"></div>
-	  
-	  <div id="footer">
-	    <a href="#" id="abreLogin" class="pirobox">StickMe</a>
-	  </div>  
+<div id="page">
+  <div id="header">
+  	<h1>StickMe</h1>
+  	<% unless @logged_user.nil? %>
+	  	<ul id="menu_header">
+	  		<li class="name"><%= @logged_user.name %></li>
+	  		<li><%= link_to "Logout", "user/logout_forever" %></li>
+	  	</ul>
+  	<% end %>
+  	<input type="text" id="textField" size="100" maxlenght="10"/> 
+  	<input type="button" id="sendButton" value="Send"/>
   </div>
 
+  <div id="container"></div>
+  error <%=flash[:error]%> <br />
+  sucess: <%=flash[:notice]%>
+  <div id="footer">
+    <a href="#" id="abreLogin" class="pirobox">StickMe</a>
+  </div>  
+</div>
+
 <%= javascript_include_tag '/javascripts/initialization.js' %>
-<script>
-	not_logged = '<%= raw (render "user/not_logged_user").gsub("\n", "") %>';
-</script>
 
 <script>
 	$(function() {
@@ -38,30 +36,16 @@
 
 	<% if @logged_user.nil? %>
 		$(function() {
-			setPirobox(not_logged, function() {
-				$("create_account_area").hide();
-				
-				$('#login_column').hide().fadeIn(2000);
-				$('#signup_column').hide().fadeIn(1500);
-				$('#test_column').hide().fadeIn(1000);
-				$('#login_login').focus();
-				$("#test_account").click(function() {
-					$("#test_account_form").submit();
-				})
-				
-				$('.create_account').click(function () {
-					$('#login_column').fadeOut(500);
-					$('#signup_column').fadeOut(500);
-					$('#test_column').fadeOut(500);	
-					$('#columns').fadeOut(600, function() {
-						$('#create_account_area').show().hide().fadeIn(1000);
-						$('#login_user').focus();
-					});
-				});
-			});
-			
-			$('#abreLogin').click();
+			not_logged = '<%= raw (render "user/not_logged_user").gsub("\n", "") %>';
+			initializePiro();
 		});
-	<% end %>	
+	<% end %>
 
+			
+	<% unless flash[:error].nil? %>
+		$.pnotify({
+		    title: 'Bootstrap Error',
+		    text: '<%=flash[:error]%>',
+		});
+	<% end %>
 </script>

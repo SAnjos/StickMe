@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :user_authenticated?, :except => [ :index, :login ]
+  before_filter :user_authenticated?, :except => [ :index, :login, :create ]
   skip_filter :verify_authenticity_token
   
   def logged_user

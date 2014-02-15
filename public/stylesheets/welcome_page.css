@@ -26,7 +26,7 @@ div#welcome_page div#columns {
 	height: 100%;
 }
 
-div#welcome_page div#columns h2 {
+div#welcome_page h2 {
 	margin: 10px 0px;
 	
 
@@ -52,7 +52,9 @@ div#welcome_page div.column {
 /* The three columns */
 
 div#welcome_page div#create_account_area {
-	
+	margin-left: 280px;
+	width: 250px;
+
 }
 
 /* form */

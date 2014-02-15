@@ -2,11 +2,11 @@ class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
       t.integer :id
-      t.string :name, :limit => 30
-      t.string :email, :email => true
-      t.string :password, :password => true, :limit => 10
+      t.string :name, :limit => 30, :null => false
+      t.string :email, :email => true, :null => false
+      t.string :password, :password => true, :limit => 10, :null => false
       t.boolean :admin, :defalut => false  
-      t.boolean :rememberme, :default => false
+      t.boolean :rememberme, :default => true
       t.timestamps
     end
     

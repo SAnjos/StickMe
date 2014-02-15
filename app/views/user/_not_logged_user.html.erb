@@ -37,9 +37,10 @@
 		</div>
 	</div>
 	<div id="create_account_area">
+		<h2>Create Account</h2>
 		<%= form_tag :controller => 'user', :action => 'create' do %>
 		    <p>Login:<br />
-		    <%= text_field(:login, :user, :class => "input login", :size => 8, :maxlength => 30, :style => "width: 200px;") %></p>
+		    <%= text_field(:login, :name, :class => "input login", :size => 8, :maxlength => 30, :style => "width: 200px;") %></p>
 		    <p>E-mail:<br />
 		    <%= text_field(:login, :email, :size => 8, :maxlength => 30, :style => "width: 200px;") %></p>
 		    <p>Password: <br />

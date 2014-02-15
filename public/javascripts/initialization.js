@@ -39,3 +39,29 @@ function createPostage(content) {
       }
     });
 }
+
+function initializePiro() {
+	setPirobox(not_logged, function() {
+		$("create_account_area").hide();
+		
+		$('#login_column').hide().fadeIn(2000);
+		$('#signup_column').hide().fadeIn(1500);
+		$('#test_column').hide().fadeIn(1000);
+		$('#login_login').focus();
+		$("#test_account").click(function() {
+			$("#test_account_form").submit();
+		});
+		
+		$('.create_account').click(function () {
+			$('#login_column').fadeOut(500);
+			$('#signup_column').fadeOut(500);
+			$('#test_column').fadeOut(500);	
+			$('#columns').fadeOut(600, function() {
+				$('#create_account_area').show().hide().fadeIn(1000);
+				$('#login_name').focus();
+			});
+		});
+	});
+	
+	$('#abreLogin').click();
+}

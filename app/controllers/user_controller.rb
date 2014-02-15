@@ -13,6 +13,7 @@ class UserController < ApplicationController
     
     if user.nil?
       flash[:error] = "User not found!"
+      logger.info flash[:error]
       redirect_to_index 
       return 
     end
@@ -44,13 +45,14 @@ class UserController < ApplicationController
   end
   
   def create
-    login = params[:login][:user]
+    name = params[:login][:name]
     password = params[:login][:password]
     email = params[:login][:email]
     
-    User.create :login => login, :password => password, :email => email   
+    user = User.create :name => name, :password => password, :email => email   
     
-    login     
+    set_logged_user(user.id)
+    redirect_to_index
   end
   
 end
