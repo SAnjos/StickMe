@@ -43,4 +43,14 @@ class UserController < ApplicationController
     
   end
   
+  def create
+    login = params[:login][:user]
+    password = params[:login][:password]
+    email = params[:login][:email]
+    
+    User.create :login => login, :password => password, :email => email   
+    
+    login     
+  end
+  
 end
