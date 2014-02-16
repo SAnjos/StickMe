@@ -12,12 +12,13 @@
   </div>
 
   <div id="container"></div>
-  error <%=flash[:error]%> <br />
-  sucess: <%=flash[:notice]%>
+
   <div id="footer">
     <a href="#" id="abreLogin" class="pirobox">StickMe</a>
   </div>  
 </div>
+
+<div id="freeow" class="freeow freeow-top-right" style="z-index:9999;"></div>
 
 <%= javascript_include_tag '/javascripts/initialization.js' %>
 
@@ -43,9 +44,16 @@
 
 			
 	<% unless flash[:error].nil? %>
-		$.pnotify({
-		    title: 'Bootstrap Error',
-		    text: '<%=flash[:error]%>',
+		$("#freeow").freeow("Sorry, but", "<%=flash[:error]%>", {
+		    classes: ["simple", "error"],
+		    autoHide: true,
+		});
+	<% end %>
+	
+	<% unless flash[:notice].nil? %>
+		$("#freeow").freeow("Hey", "<%=flash[:notice]%>", {
+		    classes: ["green", "happy"],
+		    autoHide: true,
 		});
 	<% end %>
 </script>

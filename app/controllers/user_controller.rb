@@ -12,8 +12,7 @@ class UserController < ApplicationController
     user = UserController.find_user(login, password)
     
     if user.nil?
-      flash[:error] = "User not found!"
-      logger.info flash[:error]
+      flash[:error] = "The informed user was not found or does not match the password!"
       redirect_to_index 
       return 
     end
@@ -27,6 +26,7 @@ class UserController < ApplicationController
     
     set_logged_user(user.id)
     redirect_to_index
+    flash[:notice] = "Welcome " + user.name + ", we are glad to see you!"
   end
   
   def logout
@@ -38,6 +38,7 @@ class UserController < ApplicationController
     cookies[:user_name] = nil
     cookies[:user_pass] = nil
     logout
+    flash[:notice] = "We hope to see you soon!"
   end
   
   def change
@@ -48,9 +49,16 @@ class UserController < ApplicationController
     name = params[:login][:name]
     password = params[:login][:password]
     email = params[:login][:email]
-    
-    user = User.create :name => name, :password => password, :email => email   
-    
+
+    user = User.new :name => name, :password => password, :email => email   
+    if (user.save)    
+      flash[:notice] = "Your account was created successfully!"
+    else
+      user.errors.values.each { |e|
+        flash.now[:error] = e.to_s
+      }
+    end  
+
     set_logged_user(user.id)
     redirect_to_index
   end
