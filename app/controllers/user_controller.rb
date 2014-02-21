@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  
+    
   def self.find_user(login, password)
     User.find(:first, :conditions => ['(lower(name) = lower(?) or lower(email) = lower(?)) and password = ?', login, login, password ])
   end
@@ -62,5 +62,5 @@ class UserController < ApplicationController
     set_logged_user(user.id)
     redirect_to_index
   end
-  
+   
 end
